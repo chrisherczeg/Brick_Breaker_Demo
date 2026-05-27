@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0b0f1a" />
+  <title>Brick Breaker Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="game-wrapper">
+    <header id="hud">
+      <div class="hud-item"><span class="hud-label">Score</span><span id="score">0</span></div>
+      <div class="hud-item"><span class="hud-label">Lives</span><span id="lives">3</span></div>
+      <div class="hud-item"><span class="hud-label">Level</span><span id="level">1</span></div>
+    </header>
+
+    <div id="canvas-container">
+      <canvas id="game" width="800" height="600" aria-label="Brick Breaker game canvas"></canvas>
+      <div id="overlay" class="visible">
+        <div class="overlay-content">
+          <h1 id="overlay-title">Brick Breaker</h1>
+          <p id="overlay-text">Use <kbd>A</kbd> / <kbd>D</kbd> to move and <kbd>Space</kbd> to launch.<br />On mobile, use the on-screen controls.</p>
+          <button id="start-btn" type="button">Start Game</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="touch-controls" aria-hidden="true">
+      <button class="tc-btn" id="btn-left" type="button" aria-label="Move left">&#9664;</button>
+      <button class="tc-btn tc-launch" id="btn-launch" type="button" aria-label="Launch ball">LAUNCH</button>
+      <button class="tc-btn" id="btn-right" type="button" aria-label="Move right">&#9654;</button>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

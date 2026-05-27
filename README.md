@@ -1,30 +1,43 @@
 # Brick_Breaker_Demo
 
-A demo implementation of the classic Brick Breaker arcade game.
+A static-webpage implementation of the classic Brick Breaker arcade game. Pure HTML, CSS, and vanilla JavaScript — no build step, no dependencies.
 
-## Overview
+## Play
 
-Brick_Breaker_Demo is a simple, hands-on project that recreates the timeless brick-breaking gameplay loop: bounce a ball off a paddle to clear rows of bricks without letting the ball fall past the bottom of the screen.
+Open [index.html](index.html) in any modern browser, or serve the folder with any static file server:
+
+```bash
+# from the project root
+python3 -m http.server 8000
+# then visit http://localhost:8000
+```
+
+## Controls
+
+**Desktop**
+- `A` / `D` — move the paddle left / right (arrow keys also work)
+- `Space` — launch the ball / start the game
+
+**Mobile**
+- Translucent on-screen arrow buttons — move the paddle
+- `LAUNCH` button — launch the ball / start the game
 
 ## Features
 
-- Paddle controlled by player input
-- Ball with bounce physics
-- Destructible brick grid
-- Score tracking
-- Win/lose conditions
+- Smooth canvas-based rendering with `requestAnimationFrame`
+- Variable bounce angle based on where the ball hits the paddle
+- Multi-hit bricks (HP shown via fading)
+- Score, lives, and level tracking
+- Multiple levels with increasing difficulty
+- Automatic pause when the tab loses focus
+- Responsive layout that adapts to mobile screens
+- Touch controls auto-show on mobile / touch devices
 
-## Getting Started
+## Project Structure
 
-Instructions for running the demo will be added as the project develops.
-
-## Roadmap
-
-- [ ] Core gameplay loop
-- [ ] Score and lives display
-- [ ] Multiple levels
-- [ ] Sound effects
-- [ ] Power-ups
+- [index.html](index.html) — markup, HUD, overlay, and touch controls
+- [styles.css](styles.css) — styling and responsive layout
+- [game.js](game.js) — game loop, physics, input handling, and rendering
 
 ## License
 
